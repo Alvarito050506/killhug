@@ -1,0 +1,2 @@
+# killhug
+Kill huggables automatically!
