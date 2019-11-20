@@ -38,8 +38,8 @@ async function kill()
 		});
 		socket.emit("attack", pid);
 		socket.emit("click", {
-			x: world.room.players[getPlayerId()].x + (Math.ceil(Math.random() * 100) < 50 ? Math.ceil(Math.random() * 50) : 0 - Math.ceil(Math.random() * 50)),
-			y: world.room.players[getPlayerId()].y + (Math.ceil(Math.random() * 100) < 50 ? Math.ceil(Math.random() * 50) : 0 - Math.ceil(Math.random() * 50))
+			x: world.room.players[localStorage.getItem("playerId")].x + (Math.ceil(Math.random() * 100) < 50 ? Math.ceil(Math.random() * 50) : 0 - Math.ceil(Math.random() * 50)),
+			y: world.room.players[localStorage.getItem("playerId")].y + (Math.ceil(Math.random() * 100) < 50 ? Math.ceil(Math.random() * 50) : 0 - Math.ceil(Math.random() * 50))
 		});
 		await sleep(1000);
 	}
